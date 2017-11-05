@@ -13,6 +13,7 @@
 		9D9263581F9FB7BB006C2FA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D9263571F9FB7BB006C2FA0 /* Assets.xcassets */; };
 		9D92635B1F9FB7BB006C2FA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D9263591F9FB7BB006C2FA0 /* LaunchScreen.storyboard */; };
 		9D9263661F9FB7BB006C2FA0 /* simple_calc_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9263651F9FB7BB006C2FA0 /* simple_calc_iOSTests.swift */; };
+		9D95D2F51FAECC4200A8A8B2 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D95D2F41FAECC4200A8A8B2 /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		9D9263611F9FB7BB006C2FA0 /* simple-calc-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "simple-calc-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D9263651F9FB7BB006C2FA0 /* simple_calc_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simple_calc_iOSTests.swift; sourceTree = "<group>"; };
 		9D9263671F9FB7BB006C2FA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D95D2F41FAECC4200A8A8B2 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				9D9263571F9FB7BB006C2FA0 /* Assets.xcassets */,
 				9D9263591F9FB7BB006C2FA0 /* LaunchScreen.storyboard */,
 				9D92635C1F9FB7BB006C2FA0 /* Info.plist */,
+				9D95D2F41FAECC4200A8A8B2 /* HistoryViewController.swift */,
 			);
 			path = "simple-calc-iOS";
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D95D2F51FAECC4200A8A8B2 /* HistoryViewController.swift in Sources */,
 				9D9263531F9FB7BB006C2FA0 /* ViewController.swift in Sources */,
 				9D9263511F9FB7BB006C2FA0 /* AppDelegate.swift in Sources */,
 			);

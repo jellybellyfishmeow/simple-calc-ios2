@@ -10,9 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     var currOp : String = ""
+    var history = [String]()
     var inputNums : String = ""
+    var operation : String = ""
     @IBOutlet weak var displayText: UILabel!
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,6 +24,11 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let next = segue.destination as! HistoryViewController
+        next.history = history
     }
     
     func add(_ first : Double, _ second : Double) -> Double {
@@ -81,12 +89,12 @@ class ViewController: UIViewController {
     func clear() {
         inputNums = ""
         currOp = ""
-        // clear text
-        // disable operand buttons?
+        operation = ""
     }
     
 
     @IBAction func onClickFunction(_ sender: UIButton) {
+
         var text : String = ""
         let buttonPressed : String! = sender.titleLabel!.text
         switch buttonPressed {
@@ -104,14 +112,19 @@ class ViewController: UIViewController {
             default:
                 text = "not valid"
             }
+            operation += " " + "= " + text
+            history.append(operation)
             clear()
         case "+", "-", "*", "/", "%", "COUNT", "AVG", "FACT" :
             inputNums += " "
             currOp = buttonPressed
             text += currOp
+            operation += " " + currOp
         default:
             inputNums += buttonPressed
             text += buttonPressed
+            operation += " " + buttonPressed
+
         }
         displayText.text = text
     }
